@@ -1,3 +1,6 @@
-"scripts":{
-	"start": "node hw.js"
+{
+	"scripts": {
+	
+		"start": "node hw.js"
+	}
 }
