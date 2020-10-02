@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'client')));
 app.post("/", jsonParser, function (request, response) {
     console.log(request.body);
     if(!request.body) return response.sendStatus(400);
-
+    console.log(request.body.nextTo);
     response.json(request.body);
 });
 
