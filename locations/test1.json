@@ -1,0 +1,5 @@
+{
+  "current": "test1",
+  "nextTo": ["start", "test2"],
+  "text": "<a href='#' class='link' id='start'>go to start</a></br><a href class='link' id='test2'>go to test2</a>"
+}
