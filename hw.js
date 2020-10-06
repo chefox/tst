@@ -1,14 +1,28 @@
-const http = require('http');
+const express = require("express");
+var path = require("path");
 
-const hostname = '0.0.0.0';
-const port = process.env.PORT || 80;
+var locations={};
+locations["start"] = require("./locations/start.json");
+locations["test1"] = require("./locations/test1.json");
+locations["test2"] = require("./locations/test2.json");
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
+const app = express();
+
+const jsonParser = express.json();
+
+app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static(path.join(__dirname, 'locations')));
+
+app.post("/", jsonParser, function (request, response) {
+    console.log(request.body);
+    if (!request.body) return response.sendStatus(400);
+
+    response.json(locations[request.body.goTo]);
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+app.get("/", function (request, response) {
+
+    response.render("index.html");
 });
+
+app.listen(process.env.PORT || 80);
