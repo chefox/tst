@@ -1,5 +1,5 @@
 {
   "current": "test1",
   "nextTo": ["start", "test2"],
-  "text": "<a href='#' class='link' id='start'>go to start</a></br><a href class='link' id='test2'>go to test2</a>"
+  "text": "<div id='1' class='block' style='display: none;'>testtext 1 block</div><div id='2' class='block' style='display: none;'>testtext 2 block</div><div id='3' class='block' style='display: none;'><a href='#' class='link' id='start'>go to start</a></br><a href class='link' id='test2'>go to test2</a></div>"
 }
