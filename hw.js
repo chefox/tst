@@ -6,6 +6,7 @@ locations["start"] = require("./locations/start.json");
 locations["test1"] = require("./locations/test1.json");
 locations["test2"] = require("./locations/test2.json");
 
+
 const app = express();
 
 const jsonParser = express.json();

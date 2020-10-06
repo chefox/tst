@@ -1,3 +1,4 @@
+
 let current="start";
 let goTo;
 
