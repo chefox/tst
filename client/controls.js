@@ -1,17 +1,10 @@
 let currentLocation = "start";
 let currentBlock = 0;
+let audio;
+
 
 window.onload = function () {
-    document.getElementById("submit").addEventListener("click", function (e) {
-        e.preventDefault();
-
-        let registerForm = document.forms["sendTest"];
-        let testData = registerForm.elements["test"].value;
-        let test = JSON.stringify(
-            {current: currentLocation, goTo: testData}
-        );
-        sendRequest(test);
-    });
+    loadLinks();
 }
 
 function loadLinks() {
@@ -33,7 +26,6 @@ function loadBlocks() {
     if (listOfBlocks.length > 0) {
         listOfBlocks[0].style.display = "block";
         [].forEach.call(listOfBlocks, el => {
-
             el.addEventListener("click", function (e) {
                 e.preventDefault();
                 var nextBlock = document.getElementById(+e.target.id + 1);
@@ -54,7 +46,13 @@ function sendRequest(requestBody) {
         let resp = JSON.parse(request.response);
 
         current = resp.current;
-        document.getElementById("myspan").innerHTML = (resp.text);
+        if(resp.music){
+            if(audio) audio.pause();
+            audio = new Audio(resp.music);
+            audio.play();
+        }
+        document.getElementById("content").style.backgroundImage="url("+resp.background+")";
+        document.getElementById("content").innerHTML = (resp.text);
         loadLinks();
         loadBlocks();
     });
