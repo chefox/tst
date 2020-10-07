@@ -1,67 +1,53 @@
-body { margin: 0px; }
+body {
+    margin: 0px;
+    background: black;
+}
+
+@font-face {
+    font-family: 'base';
+    src: url('base.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('base.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+    font-family: 'coursive';
+    src: url('coursive.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('coursive.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 
 .background {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: black;
-    cursor:url(img/cursor_day.png), auto;
+    cursor: url(img/cursor_day.png) 52 6, auto;
+}
+
+.block{
+    display: none;
 }
 
 .content {
+    font-family: base;
+    font-size: 24px;
     width: 1000px;
     height: 700px;
+    color: #291d19;
     background-color: black;
     background-image: url(img/paper_title.png);
 
-    position:absolute;
-    left:0; right:0;
-    top:0; bottom:0;
-    margin:auto;
-
-    max-width:100%;
-    max-height:100%;
-    overflow:auto;
+    margin: 0 auto;
+    max-width: 1000px;
+    max-height: 700px;
+    overflow: auto;
 }
 
 a {
+    font-family: coursive;
     font-weight:900;
-    font-size:69px;
+    font-size:24px;
     margin-bottom:10px;
     line-height:74px;
-    color:#6D0839;
-    -webkit-animation-duration: 0.8s;
-    -webkit-transform-origin:50% 50%;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-name: tremble;
+    color: #640000;
     cursor: inherit;
-    text-shadow: 5px 5px 0 #D8C358, 8px 8px  0 #25271E, 13px 13px 0 #D8C358, 20px 20px 0 #25271E;
-}
-
-@keyframes animation-name {
-    0% {
-        color: pink;
-    }
-    50% {
-        color: yellow;
-    }
-    100% {
-        color: blue;
-    }
-}
-
-@-webkit-keyframes tremble {
-    0% { -webkit-transform: translate(2px, 1px) rotate(0deg);}
-    10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
-    30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
-    40% { -webkit-transform: translate(5px, -1px) rotate(1deg); }
-    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { -webkit-transform: translate(-2px, 1px) rotate(0deg); }
-    70% { -webkit-transform: translate(6px, 2px) rotate(-1deg); }
-    80% { -webkit-transform: translate(-1px, -3px) rotate(1deg); }
-    90% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
-    100% { -webkit-transform: translate(5px, -2px) rotate(-1deg); }
 }
