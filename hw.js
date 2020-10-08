@@ -4,7 +4,7 @@ var path = require("path");
 var locations={};
 locations["intro"] = require("./locations/intro.json");
 locations["way_from_station"] = require("./locations/way_from_station.json");
-locations["test2"] = require("./locations/test2.json");
+locations["snt_intro"] = require("./locations/snt_intro.json");
 
 
 const app = express();
