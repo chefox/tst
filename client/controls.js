@@ -1,4 +1,5 @@
 let currentLocation = "start";
+let music;
 let audio;
 let linkSound = new Audio("sound/click.mp3");
 let blockSound = new Audio("sound/page.mp3");
@@ -6,24 +7,23 @@ let need_quit = false;
 let have_ulita_key = false;
 let son_have_kastrula = false;
 let kastrula_had_spoken = false;
-let spotlightSize = 'transparent 0%, rgba(255, 219, 87, 0.7) 1%, rgba(255, 30, 0, 0.4) 1.1%, rgba(215, 100, 0, 0.2) 1.2%, transparent 8%, rgba(0, 0, 0, 0.6) 35%'
+let spotlightSize = 'transparent 0%, rgba(220, 195, 100, 0.7) 1%, rgba(220, 185, 70, 0.4) 1.2%, rgba(225, 220, 95, 0.2) 1.4%, transparent 8%, rgba(0, 0, 0, 0.6) 35%';
+let spotlight;
 
 window.addEventListener("load", () => {
-
-    const spotlight = document.querySelector('.spotlight');
+    spotlight = document.querySelector('.spotlight');
     window.addEventListener('mousemove', e => updateSpotlight(e));
-
     function updateSpotlight(e) {
-
         spotlight.style.backgroundImage = `radial-gradient(circle at ${e.pageX / window.innerWidth * 100}% ${e.pageY / window.innerHeight * 100}%, ${spotlightSize}`;
     }
 });
 
 
+
 window.onload = function () {
     window.scrollTo(0,0);
+    if(detectMob()) spotlight.style.display="none";
     loadLinks();
-
 }
 
 function loadLinks() {
@@ -32,10 +32,14 @@ function loadLinks() {
 
         el.addEventListener("click", function (e) {
             e.preventDefault();
-            let test = JSON.stringify(
-                {current: currentLocation, goTo: e.target.id}
+            let reqest = JSON.stringify(
+                {
+                    have_ulita_key: have_ulita_key,
+                    son_have_kastrula: son_have_kastrula,
+                    kastrula_had_spoken: kastrula_had_spoken,
+                    goTo: e.target.id}
             );
-            sendRequest(test);
+            sendRequest(reqest);
             linkSound.play()
         });
     })
@@ -67,23 +71,51 @@ function sendRequest(requestBody) {
         let resp = JSON.parse(request.response);
 
         current = resp.current;
-        if (resp.music) {
+        if (resp.music && music!=resp.music) {
+            music=resp.music;
             if (audio) audio.pause();
-            audio = new Audio(resp.music);
+            audio = new Audio(music);
             audio.play();
         }
-        if (resp.spotlight){
-            spotlightSize=resp.spotlight;
-        }
-        if (resp.bgcolor){
-            document.body.style.background=resp.bgcolor;
-        }
+        if (resp.spotlight!=spotlightSize) spotlightSize=resp.spotlight;
+        if (resp.bgcolor!=document.body.style.background) document.body.style.background=resp.bgcolor;
+        if(resp.have_ulita_key) have_ulita_key=resp.have_ulita_key;
+        if(resp.son_have_kastrula) son_have_kastrula=resp.son_have_kastrula;
+        if(resp.kastrula_had_spoken) kastrula_had_spoken=resp.kastrula_had_spoken;
+
         document.getElementById("content").style.backgroundImage = "url("+resp.background+")";
         document.getElementById("content").innerHTML = (resp.text);
         window.scrollTo(0,0);
         loadLinks();
+        selectBlock();
         loadBlocks();
     });
     request.send(requestBody);
+}
+
+function detectMob() {
+    const toMatch = [
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /iPad/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i
+    ];
+
+    return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+    });
+}
+
+function selectBlock(){
+    let have_ulita_keyFound = document.getElementsByName("have_ulita_key")[0];
+    let son_have_kastrulaFound = document.getElementsByName("son_have_kastrula")[0];
+    let kastrula_had_spokenFound = document.getElementsByName("kastrula_had_spoken")[0];
+    if(have_ulita_keyFound){
+        if(have_ulita_key)document.getElementsByName("dont_have_ulita_key")[0].remove();
+        else have_ulita_keyFound.remove();
+    }
 }
 

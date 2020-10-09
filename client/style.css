@@ -51,6 +51,14 @@ a {
     color: #640000;;
     cursor: inherit;
 }
+
+a:before{
+    content:url('img/cursor_empty.png');
+    display:inline;
+    position: relative;
+    cursor: inherit;
+}
+
 a:hover {
     display: inline;
     color: #7c1111;
@@ -72,9 +80,9 @@ a:hover:before{
     background-image: radial-gradient(
             circle,
             transparent 0%,
-            rgba(255, 219, 87, 0.7) 1%,
-            rgba(255, 30, 0, 0.4) 1.1%,
-            rgba(215, 100, 0, 0.2) 1.2%,
+            rgba(220, 195, 100, 0.7) 1%,
+            rgba(220, 185, 70, 0.4) 1.2%,
+            rgba(225, 220, 95, 0.1) 1.4%,
             transparent 8%,
             rgba(0, 0, 0, 0.8) 35%
     );
