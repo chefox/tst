@@ -5,6 +5,10 @@ var locations={};
 locations["intro"] = require("./locations/intro.json");
 locations["way_from_station"] = require("./locations/way_from_station.json");
 locations["snt_intro"] = require("./locations/snt_intro.json");
+locations["uchastok_entry"] = require("./locations/uchastok_entry.json");
+locations["uch_pod_kryltso"] = require("./locations/uch_pod_kryltso.json");
+locations["uch_posmotret"] = require("./locations/uch_posmotret.json");
+locations["dom_osmotr"] = require("./locations/dom_osmotr.json");
 
 
 const app = express();
