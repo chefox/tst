@@ -9,6 +9,12 @@ locations["uchastok_entry"] = require("./locations/uchastok_entry.json");
 locations["uch_pod_kryltso"] = require("./locations/uch_pod_kryltso.json");
 locations["uch_posmotret"] = require("./locations/uch_posmotret.json");
 locations["dom_osmotr"] = require("./locations/dom_osmotr.json");
+locations["ulita_komn"] = require("./locations/ulita_komn.json");
+locations["dom_spatenki"] = require("./locations/dom_spatenki.json");
+locations["dom_topchan_son"] = require("./locations/dom_topchan_son.json");
+locations["dom_spok_son"] = require("./locations/dom_spok_son.json");
+locations["dom_utro"] = require("./locations/dom_utro.json");
+locations["ending_electrichka"] = require("./locations/ending_electrichka.json");
 
 
 const app = express();

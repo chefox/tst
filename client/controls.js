@@ -21,6 +21,7 @@ window.addEventListener("load", () => {
 
 
 window.onload = function () {
+    document.documentElement.style.setProperty('--cursor', 'url(img/cursor_day.png)')
     window.scrollTo(0,0);
     if(detectMob()) spotlight.style.display="none";
     loadLinks();
@@ -74,9 +75,12 @@ function sendRequest(requestBody) {
         if (resp.music && music!=resp.music) {
             music=resp.music;
             if (audio) audio.pause();
-            audio = new Audio(music);
-            audio.play();
+            if(music!="nomusic") {
+                audio = new Audio(music);
+                audio.play();
+            }
         }
+        if(resp.cursor) document.documentElement.style.setProperty('--cursor', resp.cursor)
         if (resp.spotlight!=spotlightSize) spotlightSize=resp.spotlight;
         if (resp.bgcolor!=document.body.style.background) document.body.style.background=resp.bgcolor;
         if(resp.have_ulita_key) have_ulita_key=resp.have_ulita_key;

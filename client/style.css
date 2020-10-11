@@ -1,3 +1,7 @@
+root{
+    --cursor: url('img/cursor_day.png');
+}
+
 body {
     margin: 0px;
     background: black;
@@ -53,7 +57,7 @@ a {
 }
 
 a:before{
-    content:url('img/cursor_empty.png');
+    content:url(img/cursor_empty.png);
     display:inline;
     position: relative;
     cursor: inherit;
@@ -66,7 +70,7 @@ a:hover {
     cursor: inherit;
 }
 a:hover:before{
-    content:url('img/cursor_day.png');
+    content:var(--cursor);
     display:inline;
     position: relative;
     cursor: inherit;
