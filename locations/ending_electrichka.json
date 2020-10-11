@@ -1,0 +1,9 @@
+{
+  "background": "img/to_home.jpg",
+  "music": "sound/day_theme.ogg",
+  "bgcolor": "rgb(211, 208, 199)",
+  "cursor": "url(img/cursor_day.png)",
+  "have_ulita_key": false,
+  "spotlight": "transparent 0%, rgba(150, 150, 150, 0.7) 1%, rgba(255, 255, 255, 0.4) 1.1%, rgba(0, 0, 0, 0.2) 1.2%, rgba(150, 150, 150, 0.1) 1.2%, transparent 8%, rgba(211, 208, 199, 0.5) 35%",
+  "text": "<div class='textblock' style='text-align: center; width: 856px; height: 181px; margin-left: 74px; margin-top: 77px;'>\t<div class='block' id='1'>\n\t  Я сидел в вечерней электричке, полной возвращавшихся в город дачников и садоводов, и размышлял о том, что лишь мимоходом коснулся загадок жизни своего таинственного дяди и что мне предстояло ещё не раз побывать в садовом товариществе 'МОСТОЧЛЕГСТРОЙ', чтобы во всём разобраться.\n\t</div>\n\t<div class='block' id='2'>\n\t  Однако с тех пор по причинам личного и весьма деликатного характера, которые я не в состоянии доверить страницам этой повести, мне так и не довелось вернуться на садовые участки.\n\t</div>\t<div class='block' id='3'>КОНЕЦ &#8470;1<br />(Бремя обыденности)</div><div class='block' id='4'><a href=# class='link' id='intro'>Начать сначала</a></div></div>"
+}
