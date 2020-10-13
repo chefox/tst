@@ -15,6 +15,11 @@ locations["dom_topchan_son"] = require("./locations/dom_topchan_son.json");
 locations["dom_spok_son"] = require("./locations/dom_spok_son.json");
 locations["dom_utro"] = require("./locations/dom_utro.json");
 locations["ending_electrichka"] = require("./locations/ending_electrichka.json");
+locations["dom_spalna_son"] = require("./locations/dom_spalna_son.json");
+locations["dom_borsh_son"] = require("./locations/dom_borsh_son.json");
+locations["dom_borsh_son_zai"] = require("./locations/dom_borsh_son_zai.json");
+locations["dom_borsh_zai_exit"] = require("./locations/dom_borsh_zai_exit.json");
+locations["dom_spalna_noch"] = require("./locations/dom_spalna_noch.json");
 
 
 const app = express();

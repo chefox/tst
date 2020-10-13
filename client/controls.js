@@ -13,17 +13,17 @@ let spotlight;
 window.addEventListener("load", () => {
     spotlight = document.querySelector('.spotlight');
     window.addEventListener('mousemove', e => updateSpotlight(e));
+
     function updateSpotlight(e) {
         spotlight.style.backgroundImage = `radial-gradient(circle at ${e.pageX / window.innerWidth * 100}% ${e.pageY / window.innerHeight * 100}%, ${spotlightSize}`;
     }
 });
 
 
-
 window.onload = function () {
     document.documentElement.style.setProperty('--cursor', 'url(img/cursor_day.png)')
-    window.scrollTo(0,0);
-    if(detectMob()) spotlight.style.display="none";
+    window.scrollTo(0, 0);
+    if (detectMob()) spotlight.style.display = "none";
     loadLinks();
 }
 
@@ -38,7 +38,8 @@ function loadLinks() {
                     have_ulita_key: have_ulita_key,
                     son_have_kastrula: son_have_kastrula,
                     kastrula_had_spoken: kastrula_had_spoken,
-                    goTo: e.target.id}
+                    goTo: e.target.id
+                }
             );
             sendRequest(reqest);
             linkSound.play()
@@ -72,27 +73,29 @@ function sendRequest(requestBody) {
         let resp = JSON.parse(request.response);
 
         current = resp.current;
-        if (resp.music && music!=resp.music) {
-            music=resp.music;
+        if (resp.music && music != resp.music) {
+            music = resp.music;
             if (audio) audio.pause();
-            if(music!="nomusic") {
+            if (music != "nomusic") {
                 audio = new Audio(music);
                 audio.play();
             }
         }
-        if(resp.cursor) document.documentElement.style.setProperty('--cursor', resp.cursor)
-        if (resp.spotlight!=spotlightSize) spotlightSize=resp.spotlight;
-        if (resp.bgcolor!=document.body.style.background) document.body.style.background=resp.bgcolor;
-        if(resp.have_ulita_key) have_ulita_key=resp.have_ulita_key;
-        if(resp.son_have_kastrula) son_have_kastrula=resp.son_have_kastrula;
-        if(resp.kastrula_had_spoken) kastrula_had_spoken=resp.kastrula_had_spoken;
+        if (resp.cursor) document.documentElement.style.setProperty('--cursor', resp.cursor)
+        if (resp.spotlight != spotlightSize) spotlightSize = resp.spotlight;
+        if (resp.bgcolor != document.body.style.background) document.body.style.background = resp.bgcolor;
+        if (resp.have_ulita_key) have_ulita_key = resp.have_ulita_key;
+        if (resp.son_have_kastrula) son_have_kastrula = resp.son_have_kastrula;
+        if (resp.kastrula_had_spoken) kastrula_had_spoken = resp.kastrula_had_spoken;
 
-        document.getElementById("content").style.backgroundImage = "url("+resp.background+")";
+        document.getElementById("content").style.backgroundImage = "url(" + resp.background + ")";
         document.getElementById("content").innerHTML = (resp.text);
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
         loadLinks();
+        invertColours(resp.invertText)
         selectBlock();
         loadBlocks();
+        dispatchEvent(new Event('mousemove'));
     });
     request.send(requestBody);
 }
@@ -113,12 +116,26 @@ function detectMob() {
     });
 }
 
-function selectBlock(){
+function invertColours(invert) {
+    if (invert) {
+        document.querySelector(".content").style.color = 'rgb(234, 233, 237)';
+        [].forEach.call(document.getElementsByTagName("a"), el => {
+            el.style.color = 'rgb(200, 100, 100)';
+        });
+    } else {
+        document.querySelector(".content").style.color = 'rgb(41, 27, 25)';
+        [].forEach.call(document.getElementsByTagName("a"), el => {
+            el.style.color = 'rgb(100, 0, 0)';
+        });
+    }
+}
+
+function selectBlock() {
     let have_ulita_keyFound = document.getElementsByName("have_ulita_key")[0];
     let son_have_kastrulaFound = document.getElementsByName("son_have_kastrula")[0];
     let kastrula_had_spokenFound = document.getElementsByName("kastrula_had_spoken")[0];
-    if(have_ulita_keyFound){
-        if(have_ulita_key)document.getElementsByName("dont_have_ulita_key")[0].remove();
+    if (have_ulita_keyFound) {
+        if (have_ulita_key) document.getElementsByName("dont_have_ulita_key")[0].remove();
         else have_ulita_keyFound.remove();
     }
 }
