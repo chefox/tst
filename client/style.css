@@ -33,10 +33,10 @@ body {
 
 .content {
     font-family: base;
-    font-size: 20px;
+    font-size: 18px;
     width: 1000px;
     height: 700px;
-    color: #291d19;
+    color: rgb(41, 27, 25);
     background-image: url(img/paper_title.jpg);
 
     margin: 0 auto;
@@ -49,10 +49,10 @@ a {
     text-decoration: none;
     font-family: coursive;
     font-weight:900;
-    font-size:22px;
+    font-size:20px;
     margin-bottom:10px;
-    line-height:74px;
-    color: #640000;;
+    line-height:36px;
+    color: rgb(100, 0, 0);
     cursor: inherit;
 }
 
@@ -65,7 +65,6 @@ a:before{
 
 a:hover {
     display: inline;
-    color: #7c1111;
     text-shadow: 5px 5px 20px rgba(162, 0, 0, 0.3);
     cursor: inherit;
 }

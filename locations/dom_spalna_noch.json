@@ -1,0 +1,8 @@
+{
+  "background": "img/paper_small.jpg",
+  "music": "sound/night_theme.ogg",
+  "bgcolor": "rgb(0, 0, 0)",
+  "cursor": "url(img/cursor_day.png)",
+  "spotlight": "transparent 0%, rgba(220, 195, 100, 0.7) 1%, rgba(220, 185, 70, 0.4) 1.2%, rgba(225, 220, 95, 0.2) 1.4%, transparent 8%, rgba(0, 0, 0, 0.6) 35%",
+  "text": "<div class='textblock' style='text-align: center; width: 850px; height: 130px; margin-left: 73px; margin-top: 325px;'><div class='block' id='1'>Я проснулся с криком в кромешной темноте и около минуты, которая показалась мне бесконечно долгой, судорожно нащупывал выключатель прикроватной лампы.</div><div class='block' id='2'><a href=# class='link' id='dom_spalna_light'>Включить свет</a></div></div>"
+}

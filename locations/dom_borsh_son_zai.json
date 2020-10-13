@@ -1,0 +1,10 @@
+{
+  "background": "img/dream_with_zai.jpg",
+  "music": "sound/dream_theme.ogg",
+  "bgcolor": "rgb(0, 0, 0)",
+  "cursor": "url(img/cursor_dream.png)",
+  "invertText": true,
+  "son_have_kastrula": true,
+  "spotlight": "transparent 0%, rgba(220, 195, 100, 0.7) 1%, rgba(220, 185, 70, 0.4) 1.2%, rgba(225, 220, 95, 0.2) 1.4%, transparent 8%, rgba(0, 0, 0, 0.6) 35%",
+  "text": "<div class='textblock' style='text-align: center; width: 734px; height: 157px; margin-left: 124px; margin-top: 525px;'><div class='block' id='1'>\n\t  Мне приснилось, будто я, электрик Артур Борисович, выполняю какую-то мужскую хозяйственную работу на садовом участке...\n\t</div>\n\t<div class='block' id='2'>\n\t  Вдруг я услыхал оклик жены, которая просила отнести ей в погреб кастрюлю борща. Я отыскал эту кастрюлю и принёс в дом.\n\t</div>\t\n\t<div class='block' id='3'>\n\t  В гостиной я остановился перевести дух и посмотрел за окно. Там было пасмурно, шёл сильный дождь, и под яблоней, в луже, сидел плюшевый зайчик Дима.</br><a href=# class='link' id='borsh_son_outside'>Вылезти в окно</a></br><a href=# class='link' id='dom_borsh_zai_exit'>Идти дальше</a></div></div>"
+}
