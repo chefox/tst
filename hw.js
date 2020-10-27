@@ -20,6 +20,14 @@ locations["dom_borsh_son"] = require("./locations/dom_borsh_son.json");
 locations["dom_borsh_son_zai"] = require("./locations/dom_borsh_son_zai.json");
 locations["dom_borsh_zai_exit"] = require("./locations/dom_borsh_zai_exit.json");
 locations["dom_spalna_noch"] = require("./locations/dom_spalna_noch.json");
+locations["dom_spalna_light"] = require("./locations/dom_spalna_light.json");
+locations["noch_na_progulku"] = require("./locations/noch_na_progulku.json");
+locations["noch_to_kolodetz"] = require("./locations/noch_to_kolodetz.json");
+locations["progulka_ending"] = require("./locations/progulka_ending.json");
+locations["noch_mimo_kolodza"] = require("./locations/noch_mimo_kolodza.json");
+locations["noch_kolodetz_to_dom"] = require("./locations/noch_kolodetz_to_dom.json");
+locations["noch_transformator_enter"] = require("./locations/noch_transformator_enter.json");
+locations["noch_transformator_smert"] = require("./locations/noch_transformator_smert.json");
 
 
 const app = express();
@@ -41,4 +49,4 @@ app.get("/", function (request, response) {
     response.render("index.html");
 });
 
-app.listen(process.env.PORT || 80);
+app.listen(process.env.PORT || 89);
