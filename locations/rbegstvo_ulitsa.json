@@ -1,0 +1,9 @@
+{
+  "background": "img/noch.jpg",
+  "music": "sound/night_theme.ogg",
+  "bgcolor": "rgb(0, 0, 0)",
+  "cursor": "url(img/cursor_night.png)",
+  "invertText": true,
+  "spotlight": "transparent 0%, rgba(220, 195, 100, 0.7) 1%, rgba(220, 185, 70, 0.4) 1.2%, rgba(225, 220, 95, 0.2) 1.4%, transparent 8%, rgba(0, 0, 0, 0.6) 35%",
+  "text": "<div class='textblock' style='text-align: center; width: 856px; height: 170px; margin-left: 74px; margin-top: 488px;'><div class='block' id='1'>\n\t  ...и выбежал на улицу, а за моей спиной нарастали звуки шагов, пронзительного клёкота и диких криков.\n\t</div>\n\t<div class='block' id='2'>\n\t  Я нёсся по дорожкам между заборами садовых участков в предрассветном тумане, сквозь дымку которого мерцал жёлтый лик луны.\n\t</div>\n\t<div class='block' id='3'>\n\t  Когда я выбежал с территории участков на дорогу, мне чудом удалось остановить проезжавшую машину, а затем уговорить водителя подобрать меня и ехать прочь как можно скорее.\n\t</br><a href=# class='link' id='rbegstvo_ending'>Оглянуться</a></div></div>"
+}
