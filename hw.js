@@ -28,6 +28,19 @@ locations["noch_mimo_kolodza"] = require("./locations/noch_mimo_kolodza.json");
 locations["noch_kolodetz_to_dom"] = require("./locations/noch_kolodetz_to_dom.json");
 locations["noch_transformator_enter"] = require("./locations/noch_transformator_enter.json");
 locations["noch_transformator_smert"] = require("./locations/noch_transformator_smert.json");
+locations["dom_from_kolodetz"] = require("./locations/dom_from_kolodetz.json");
+locations["dom_from_kolodetz_3doors"] = require("./locations/dom_from_kolodetz_3doors.json");
+locations["dom_from_kolodetz_spalna"] = require("./locations/dom_from_kolodetz_spalna.json");
+locations["dom_from_kolodetz_podval"] = require("./locations/dom_from_kolodetz_podval.json");
+locations["podz_galerea"] = require("./locations/podz_galerea.json");
+locations["ritual"] = require("./locations/ritual.json");
+locations["ritual_begstvo"] = require("./locations/ritual_begstvo.json");
+locations["rbegstvo_galerea"] = require("./locations/rbegstvo_galerea.json");
+locations["rbegstvo_dom"] = require("./locations/rbegstvo_dom.json");
+locations["rbegstvo_ulitsa"] = require("./locations/rbegstvo_ulitsa.json");
+locations["rbegstvo_ending"] = require("./locations/rbegstvo_ending.json");
+locations["ritual_prodolj"] = require("./locations/ritual_prodolj.json");
+locations["ritual_ending"] = require("./locations/ritual_ending.json");
 
 
 const app = express();
