@@ -41,6 +41,17 @@ locations["rbegstvo_ulitsa"] = require("./locations/rbegstvo_ulitsa.json");
 locations["rbegstvo_ending"] = require("./locations/rbegstvo_ending.json");
 locations["ritual_prodolj"] = require("./locations/ritual_prodolj.json");
 locations["ritual_ending"] = require("./locations/ritual_ending.json");
+locations["borsh_son_outside"] = require("./locations/borsh_son_outside.json");
+locations["son_ab1"] = require("./locations/son_ab1.json");
+locations["son_ab2"] = require("./locations/son_ab2.json");
+locations["son_ab3"] = require("./locations/son_ab3.json");
+locations["son_ab4"] = require("./locations/son_ab4.json");
+locations["son_ab5"] = require("./locations/son_ab5.json");
+locations["son_ab6"] = require("./locations/son_ab6.json");
+locations["son_na_gorbu_k_ulite"] = require("./locations/son_na_gorbu_k_ulite.json");
+locations["dom_borsh_son_return1"] = require("./locations/dom_borsh_son_return1.json");
+locations["dom_borsh_son_return2"] = require("./locations/dom_borsh_son_return2.json");
+locations["dom_son_smert"] = require("./locations/dom_son_smert.json");
 
 
 const app = express();
