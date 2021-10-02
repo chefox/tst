@@ -1,0 +1,9 @@
+{
+  "background": "img/noch.jpg",
+  "music": "sound/night_theme.ogg",
+  "bgcolor": "rgb(0, 0, 0)",
+  "cursor": "url(img/cursor_night.png)",
+  "invertText": true,
+  "spotlight": "transparent 0%, rgba(220, 195, 100, 0.7) 1%, rgba(220, 185, 70, 0.4) 1.2%, rgba(225, 220, 95, 0.2) 1.4%, transparent 8%, rgba(0, 0, 0, 0.6) 35%",
+  "text": "<div class='textblock' style='text-align: center; width: 856px; height: 170px; margin-left: 74px; margin-top: 488px;'>\t<div class='block' id='1'>\n\t  Отбросив сомнения, я кое-как перелез через забор и подошёл к колодцу.\n\t</div>\n\t<div class='block' id='2'>\n\t  В тот же миг раздался громкий всплеск, и над краем колодезного сруба показалась чья-то голова, а затем плечи и руки.\n\t</div>\n\t<div class='block' id='3'>\n\t  В смертельном ужасе я застыл на месте, ибо даже в полутьме было ясно, что создание, явившееся передо мной, не было человеком.\n\t</div>\n\t<div class='block' id='4'>\n\t  С пронзительным клокочущим воплем оно ринулось на меня, раскинув длинные мощные руки, и сбило на землю.</br><a href=# class='link' id='progulka_ending'>Это конец</a></div></div>"
+}
