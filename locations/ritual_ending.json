@@ -1,0 +1,9 @@
+{
+  "background": "img/ulita.jpg",
+  "music": "sound/night_theme.ogg",
+  "bgcolor": "rgb(0, 0, 0)",
+  "cursor": "url(img/cursor_night.png)",
+  "invertText": true,
+  "spotlight": "transparent 0%, rgba(220, 195, 100, 0.7) 1%, rgba(220, 185, 70, 0.4) 1.2%, rgba(225, 220, 95, 0.2) 1.4%, transparent 8%, rgba(0, 0, 0, 0.6) 35%",
+  "text": "<div class='textblock' style='text-align: center; width: 856px; height: 122px; margin-left: 74px; margin-top: 578px;'><div class='block' id='1'>\n\t  Всё больше дыма входило в меня с воздухом, заполняя тело и разум отрешённой слабостью. Я захотел свернуться клубочком, спрятаться внутрь самого себя, будто в раковину.\n\t</div>\n\t<div class='block' id='2'>\n\t  Я застыл, лёжа на холодной плоскости алтаря, обхватив руками колени, чувствуя, как через мою душу в этот мир входит призрачная, со множеством спиралевидных щупалец-отростков, плоть древнего и безумного, чуждого всему человеческому божества. \n\t</div><div class='block' id='3'>КОНЕЦ &#8470;4<br />(Пришествие)</div><div class='block' id='4'><a href=# class='link' id='intro'>Начать сначала</a></div></div>"
+}

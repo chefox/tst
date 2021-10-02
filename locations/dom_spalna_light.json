@@ -1,0 +1,9 @@
+{
+  "background": "img/bedroom.jpg",
+  "music": "sound/night_theme.ogg",
+  "bgcolor": "rgb(0, 0, 0)",
+  "cursor": "url(img/cursor_night.png)",
+  "invertText": true,
+  "spotlight": "transparent 0%, rgba(220, 195, 100, 0.7) 1%, rgba(220, 185, 70, 0.4) 1.2%, rgba(225, 220, 95, 0.2) 1.4%, transparent 8%, rgba(0, 0, 0, 0.6) 35%",
+  "text": "<div class='textblock' style='text-align: center; width: 381px; height: 506px; margin-left: 73px; margin-top: 79px;'>\t<div class='block' id='1'>\n\t  При свете лампы паника, вызванная зловещим сном, начала отпускать меня, но ужас вновь затопил душу, когда взгляд мой упал на люк погреба, вырубленный в полу напротив кровати. Я не видел его здесь прежде, вернее, видел только во сне!\n\t</div>\n\t<div class='block' id='2'>\n\t  Разыгравшееся воображение рисовало в мозгу неясные, но пугающие картины, и я понял, что не в силах находиться на одном месте, оставаясь во власти отголосков кошмарного сна и болезненных фантазий.</br><a href=# class='link' id='pogreb'>Заглянуть в погреб</a></br><a href=# class='link' id='noch_na_progulku'>Выйти прогуляться на улицу</a></div></div>"
+}
