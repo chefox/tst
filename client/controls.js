@@ -59,6 +59,11 @@ function loadBlocks() {
                     e.target.style.display = "none";
                     nextBlock.style.display = "block";
                     blockSound.play();
+                    console.log(nextBlock);
+                    console.log(nextBlock.contains(nextBlock.getElementsByClassName("dialog")[0]));
+                    if(nextBlock.contains(nextBlock.getElementsByClassName("dialog")[0])){
+                        document.getElementById("content").style.backgroundImage = "url(img/" + nextBlock.getElementsByClassName("dialog")[0].id + ".jpg)";
+                    }
                 }
             });
         })

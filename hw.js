@@ -20,6 +20,8 @@ locations["dom_borsh_son"] = require("./locations/dom_borsh_son.json");
 locations["dom_borsh_son_zai"] = require("./locations/dom_borsh_son_zai.json");
 locations["dom_borsh_zai_exit"] = require("./locations/dom_borsh_zai_exit.json");
 locations["dom_spalna_noch"] = require("./locations/dom_spalna_noch.json");
+locations["borsh_son_outside"] = require("./locations/borsh_son_outside.json");
+locations["son_ab1"] = require("./locations/son_ab1.json");
 
 
 const app = express();
