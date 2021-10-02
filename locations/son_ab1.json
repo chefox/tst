@@ -4,6 +4,7 @@
   "bgcolor": "rgb(0, 0, 0)",
   "cursor": "url(img/cursor_dream.png)",
   "invertText": true,
+  "son_have_kastrula": true,
   "spotlight": "transparent 0%, rgba(220, 195, 100, 0.7) 1%, rgba(220, 185, 70, 0.4) 1.2%, rgba(225, 220, 95, 0.2) 1.4%, transparent 8%, rgba(0, 0, 0, 0.6) 35%",
-  "text": "<div class='textblock' style='text-align: center; width: 417px; height: 215px; margin-left: 526px; margin-top: 244px;'><div class='block' id='1'>Артур Борисович, указывая на кастрюлю, стоящую у его ног, произнёс:<br />  &#x2014; Что ж ты старшим не помогаешь, борщ без присмотра оставил? Давай-ка, неси кастрюлю куда положено.<br /><a href=# class='link' id='son_ab2'>Вы кто такой? Что случилось?</a><br /><a href=# class='link' id='son_ab2'>Чего это я вашу кастрюлю должен таскать?</a><br /><a href=# class='link' id='dom_borsh_son_return1'>Ну ладно...</a></div></div>"
+  "text": "<div class='textblock' style='text-align: center; width: 417; height: 215; margin-left: 526; margin-top: 244;'>\t<div class='block' id='1' ><div class='dialog' id='dream_ab_speaks'></div>\n\t  <p h-indent='0'>Артур Борисович, указывая на кастрюлю, стоящую у его ног, произнёс:</p>\n\t  &#x2014; Что ж ты старшим не помогаешь, борщ без присмотра оставил? Давай-ка, неси кастрюлю куда положено.\n\t</div><div class='block' id='2'><div class='dialog' id='dream_pers_speaks'></div>\n\t\t<a href=# class='link' id='son_ab2'>Вы кто такой? Что случилось?</a>\n\t\t</br><a href=# class='link' id='son_ab3'>Чего это я вашу кастрюлю должен таскать?</a>\n\t\t</br><a href=# class='link' id='dom_borsh_son_return1'>Ну ладно...</a></div></div>"
 }

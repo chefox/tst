@@ -59,6 +59,9 @@ function loadBlocks() {
                     e.target.style.display = "none";
                     nextBlock.style.display = "block";
                     blockSound.play();
+                    if(nextBlock.contains(nextBlock.getElementsByClassName("dialog")[0])){
+                        document.getElementById("content").style.backgroundImage = "url(img/" + nextBlock.getElementsByClassName("dialog")[0].id + ".jpg)";
+                    }
                 }
             });
         })
