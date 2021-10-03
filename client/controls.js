@@ -59,7 +59,7 @@ function loadBlocks() {
                     e.target.style.display = "none";
                     nextBlock.style.display = "block";
                     blockSound.play();
-                    if(nextBlock.contains(nextBlock.getElementsByClassName("dialog")[0])){
+                    if (nextBlock.contains(nextBlock.getElementsByClassName("dialog")[0])) {
                         document.getElementById("content").style.backgroundImage = "url(img/" + nextBlock.getElementsByClassName("dialog")[0].id + ".jpg)";
                     }
                 }
@@ -137,9 +137,30 @@ function selectBlock() {
     let have_ulita_keyFound = document.getElementsByName("have_ulita_key")[0];
     let son_have_kastrulaFound = document.getElementsByName("son_have_kastrula")[0];
     let kastrula_had_spokenFound = document.getElementsByName("kastrula_had_spoken")[0];
+    let dom_son_resumeFound = document.getElementsByName("dom_son_resume")[0];
+    let dom_son_smertFound = document.getElementsByName("dom_son_smert")[0];
+    let dom_borsh_son_podvalFound = document.getElementsByName("dom_borsh_son_podval")[0];
     if (have_ulita_keyFound) {
         if (have_ulita_key) document.getElementsByName("dont_have_ulita_key")[0].remove();
         else have_ulita_keyFound.remove();
+    }
+    if (son_have_kastrula) {
+        if (kastrula_had_spoken) {
+            if (dom_son_smertFound && dom_son_resumeFound) {
+                document.getElementsByName("dom_son_resume")[0].remove();
+                document.getElementsByName("dom_son_smert")[0].remove();
+            }
+        } else {
+            if (dom_son_resumeFound && dom_borsh_son_podvalFound) {
+                document.getElementsByName("dom_borsh_son_podval")[0].remove();
+                document.getElementsByName("dom_son_smert")[0].remove();
+            }
+        }
+    } else {
+        if (dom_son_resumeFound && dom_son_smertFound) {
+            document.getElementsByName("dom_son_resume")[0].remove();
+            document.getElementsByName("dom_son_smert")[0].remove();
+        }
     }
 }
 
