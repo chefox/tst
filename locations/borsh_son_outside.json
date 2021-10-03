@@ -4,7 +4,7 @@
   "bgcolor": "rgb(0, 0, 0)",
   "cursor": "url(img/cursor_dream.png)",
   "invertText": true,
-  "son_have_kastrula": true,
+  "son_have_kastrula": false,
   "spotlight": "transparent 0%, rgba(220, 195, 100, 0.7) 1%, rgba(220, 185, 70, 0.4) 1.2%, rgba(225, 220, 95, 0.2) 1.4%, transparent 8%, rgba(0, 0, 0, 0.6) 35%",
   "text": "<div class='textblock' style='text-align: center; width: 734px; height: 157px; margin-left: 124px; margin-top: 505px;'>\t<div class='block' id='1'>\n\t  Кастрюлю я решил оставить в доме...\n\t</div>\n\t<div class='block' id='2'>\n\tНа дворе было промозгло. Я брёл под дождём неведомо куда среди глыб железобетона, из которых выпирали ржавые проушины. Низкие тучи шевелились, обвисая корявыми отростками, источавшими струи воды.\n\t</div>\n\t<div class='block' id='3'>\n\tМеня не покидало ощущение, будто ещё недавно у меня была жена и рыжие щетинистые усы.\n\t</div><div class='block' id='4'>\n\t\t  И тут меня остановил возглас из-за спины:<br />\n\t  &#x2014; А, вот ты где!<br />\n\t<a href=# class='link' id='son_ab1'> Я обернулся</a></div></div>"
 }
