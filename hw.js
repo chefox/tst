@@ -1,7 +1,7 @@
 const express = require("express");
 var path = require("path");
 
-var locations={};
+var locations = {};
 locations["intro"] = require("./locations/intro.json");
 locations["way_from_station"] = require("./locations/way_from_station.json");
 locations["snt_intro"] = require("./locations/snt_intro.json");
@@ -48,11 +48,13 @@ locations["son_ab3"] = require("./locations/son_ab3.json");
 locations["son_ab4"] = require("./locations/son_ab4.json");
 locations["son_ab5"] = require("./locations/son_ab5.json");
 locations["son_ab6"] = require("./locations/son_ab6.json");
-// locations["son_ab7"] = require("./locations/son_ab7.json");
-// locations["son_ab8"] = require("./locations/son_ab8.json");
+locations["son_na_gorbu_k_ulite"] = require("./locations/son_na_gorbu_k_ulite.json");
+locations["son_ab7"] = require("./locations/son_ab7.json");
+locations["son_ab8"] = require("./locations/son_ab8.json");
 // locations["son_ab9"] = require("./locations/son_ab9.json");
 locations["dom_borsh_son_return1"] = require("./locations/dom_borsh_son_return1.json");
 locations["dom_borsh_son_return2"] = require("./locations/dom_borsh_son_return2.json");
+locations["dom_borsh_son_return3"] = require("./locations/dom_borsh_son_return3.json");
 locations["son_back_to_house"] = require("./locations/son_back_to_house.json");
 
 

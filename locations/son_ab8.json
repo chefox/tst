@@ -1,0 +1,9 @@
+{
+  "background": "img/dream_block_zai.jpg",
+  "music": "sound/dream_theme.ogg",
+  "bgcolor": "rgb(0, 0, 0)",
+  "cursor": "url(img/cursor_dream.png)",
+  "invertText": true,
+  "spotlight": "transparent 0%, rgba(220, 195, 100, 0.7) 1%, rgba(220, 185, 70, 0.4) 1.2%, rgba(225, 220, 95, 0.2) 1.4%, transparent 8%, rgba(0, 0, 0, 0.6) 35%",
+  "text": "<div class='textblock' style='text-align: center; width: 417px; height: 215px; margin-left: 526px; margin-top: 244px;'>\t\t<div class='block' id='1'>\n\t  Схватив кастрюлю, я выплеснул борщ старику прямо на горб. Красная жижа потекла по спине, по рукам, по щетинистым усам моего дяди и ушла в землю, а вместе с ней пропал и сам Артур Борисович.\n\t</div>\n\t<div class='block' id='2'>\n\t  Я стоял под дождём среди бетонных блоков под бугристым небом, ничего не понимая... \n\t<br /><a href=# class='link' id='son_son_k_ulite'>Может быть, всё это мне снится?</a><br /><a href=# class='link' id='son_meet_zaika'>Я только что говорил со своим покойным дядей.</a></div></div>"
+}
