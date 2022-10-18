@@ -1,0 +1,476 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ulita>
+  <scenes>
+
+    <scene id='dom_borsh_son_resume'>
+      <script>
+	ulx_stop_bgm()
+	ulx_set_background(0,0,0,nil)
+	ulx_set_background(0,0,0,'dream.png')
+	ulx_text_area_set_cursor('dream')
+	ulx_text_area_set_font_color(234,233,207, 200,0,0)
+	ulx_text_area_set_valign(0.5)
+	ulx_text_area_set_geometry(124,505,734,157)
+	ulx_set_bgm('dream_theme.ogg')
+	go='dom_spalna_noch'
+	desc='Сон, кастрюля борща'
+      </script>
+      <text>
+	<div class='block' id='4'>
+	  Вернувшись в дом и обтерев дождевую воду с усов, я поставил кастрюлю возле крышки погреба, решив сперва проверить, не испортился ли борщ.
+	</div>
+	<div class='block' id='5'>
+	  Когда я открыл кастрюлю, там была какая-то бугристая дурно пахнущая масса. Но едва я решил сообщить жене, что борщ испортился, в зловонной гуще открылась вмятина, похожая на человеческий рот, который, подёргиваясь, произнёс:<br />
+	  &#x2014; Я жду тебя, спускайся в погреб.
+	</div>
+      </text>
+    </scene>
+
+    <scene id='dom_borsh_son_podval'>
+      <script>
+	ulx_stop_bgm()
+	ulx_set_background(0,0,0,nil)
+	ulx_set_background(0,0,0,'dream.png')
+	ulx_text_area_set_cursor('dream')
+	ulx_text_area_set_font_color(234,233,207, 200,0,0)
+	ulx_text_area_set_valign(0.5)
+	ulx_text_area_set_geometry(124,505,734,157)
+	ulx_set_bgm('dream_theme.ogg')
+	go='dom_spalna_noch'
+	desc='Сон, прыжок в подвал'
+      </script>
+      <text>
+	<div class='block' id='6'>
+	  Вернувшись в дом и обтерев дождевую воду с усов, я направился к подвальному люку, открыл его и, покрепче обняв кастрюлю, спрыгнул вниз.
+	</div>
+	<div class='block' id='7'>
+	  Я летел, а дна всё не было... Пустота вокруг становилась гуще, сдавливала меня со всех сторон, а став совсем твёрдой, единой волной проникла внутрь моего тела.
+	</div>
+	<div class='block' id='8'>
+	  И я кричал пустотой &#x2014; беззвучно, так как не мог ни вдохнуть, ни выдохнуть, ни остановиться...
+	</div>
+      </text>
+    </scene>
+
+    <scene id='dom_borsh_son_zai2'>
+      <script>
+	ulx_set_background(0,0,0,'dream_with_zai.png')
+	ulx_text_area_set_cursor('dream')
+	ulx_text_area_set_font_color(234,233,207, 200,0,0)
+	ulx_text_area_set_valign(0.5)
+	ulx_text_area_set_geometry(124,505,734,157)
+	ulx_set_bgm('dream_theme.ogg')
+
+	go='borsh_son_outside'
+	desc='Сон, кастрюля борща'
+      </script>
+      <text>
+
+      </text>
+    </scene>
+
+    <scene id='son_son_k_ulite'>
+      <script>
+      	ulx_set_background(0,0,0,'dream_block_zai.png')
+	ulx_text_area_set_cursor('dream')
+	ulx_text_area_set_font_color(234,233,207, 200,0,0)
+	ulx_text_area_set_valign(0.5)
+	ulx_text_area_set_geometry(124,505,734,157)
+	ulx_set_bgm('dream_theme.ogg')
+	go='son_nebo_ulita'
+	desc='Сон, во дворе'
+      </script>
+      <text>
+	<div class='block' id='1'>
+	  По существу, происходившее вокруг безумие действительно было сном, в некий момент я это понял. А раз так, сопротивляться или принимать решения было уже бессмысленно.
+	</div>
+	<div class='block' id='2'>
+	  Я сосредоточил все умственные усилия на том, чтобы проснуться. Мир вокруг поблек, картина стала меняться, уходить вниз, прочь. Я будто плыл в серебристой пустоте, которой противостояло лишь необъятное морщинистое небо.
+	</div>
+      </text>
+    </scene>
+    
+    <scene id='son_ab9'>
+      <script>
+      	ulx_set_background(0,0,0,'dream_ab_near.png', false)
+	ulx_text_area_set_cursor('dream')
+	ulx_text_area_set_font_color(234,233,207, 200,0,0)
+	ulx_text_area_set_valign(0.5)
+	ulx_text_area_set_halign(0.5)	
+	ulx_text_area_set_geometry(526,244,417,215)
+	ulx_set_bgm('dream_theme.ogg')
+	need_introduce_borsh = not kastrula_had_spoken
+	kastrula_had_spoken = true
+	go={}
+	go['son_s_borshom_k_ulite'] = 'Наверно, только очень вкусный борщ может читать такие стихи.'
+	go['dom_borsh_son_return4'] = 'Здесь происходит что-то ужасное.'
+	desc='Сон, говорящий борщ'
+      </script>
+      <text>
+	<div class='block' id='1' name='need_introduce_borsh'>
+	  В стоявшей рядом кастрюле забурлило. Крышка съехала в сторону, и наружу показался борщ.
+	</div>
+	<div class='block' id='2'>
+	  <p h-indent='0' align='left'>Борщ:</p>
+	  <p align='left'>
+	  &#x2014; Свекольник я. Бушует непогода,<br />
+	  Выходит древний дым из берегов.<br />
+	  Судьба моя колышется и бродит...<br />
+	  Неужто к встрече с нею я готов?
+	  </p>
+	</div>
+	<div class='block' id='3'>
+	  <p h-indent='0' align='left'>Борщ:</p>
+	  <p align='left'>
+	  &#x2014; Я не готов. Но ты промолви 'Здравствуй!'<br />
+	  В тот миг, когда назначен будет час,<br />
+	  И вопль извергнут призрачные трубы,<br />
+	  И вечности заплачет контрабас!
+	  </p>
+	</div>
+	<div class='block' id='4'>
+	  <p h-indent='0'>
+	  Почему-то эти слова очень меня взволновали.
+	  </p>
+	</div>
+      </text>
+    </scene>
+    
+    <scene id='dom_borsh_son_return4'>
+      <script>
+      	ulx_set_background(0,0,0,'dream_block.png')
+	ulx_text_area_set_cursor('dream')
+	ulx_text_area_set_font_color(234,233,207, 200,0,0)
+	ulx_text_area_set_valign(0.5)
+	ulx_text_area_set_geometry(124,505,734,157)
+	ulx_set_bgm('dream_theme.ogg')
+	go='son_back_to_house'
+	desc='Сон, возвращение в дом'
+      </script>
+      <text>
+	<div class='block' id='1'>
+	  Внезапно я понял, что нужно спасаться, бежать, пока не поздно &#x2014; и сломя голову кинулся к дому...
+	</div>
+      </text>
+    </scene>
+
+    <!-- -->
+    
+    <scene id='son_s_borshom_k_ulite'>
+      <script>
+      	ulx_set_background(0,0,0,'dream_ab_near.png')
+	ulx_text_area_set_cursor('dream')
+	ulx_text_area_set_font_color(234,233,207, 200,0,0)
+	ulx_text_area_set_valign(0.5)
+	ulx_text_area_set_halign(0.5)	
+	ulx_text_area_set_geometry(526,244,417,215)
+	ulx_set_bgm('dream_theme.ogg')
+	go='son_nebo_ulita'
+	desc='Сон, обед'
+      </script>
+      <text>
+	<div class='block' id='1'>
+	  Тут я понял, что борщ и впрямь выглядел аппетитно &#x2014; наваристый, маслянисто-лиловый. Опустившись перед кастрюлей на колени, я достал ложку и ломоть серого хлеба и начал есть.
+	</div>
+	<div class='block' id='2'>
+	  В упоении глотал я ложку за ложкой. Артур Борисович, скрючившись, тоже обедал, зачёрпывая жижу пальцами.
+	</div>
+	<div class='block' id='3'>
+	  Краем глаза я видел, как земля уходит у меня из-под ног &#x2014; вместе с борщом и моим дядей мы поднимались прямо в текучее, вспухающее и опадающее небо. 
+	</div>
+      </text>
+    </scene>
+    
+    <scene id='son_nebo_ulita'>
+      <script>
+	ulx_set_background(0,0,0,'ulita_in_the_sky.png')
+	ulx_text_area_set_cursor('dream')
+	ulx_text_area_set_font_color(234,233,207, 200,0,0)
+	ulx_text_area_set_valign(0.5)
+	ulx_text_area_set_geometry(65,517,865,149)
+	ulx_set_bgm('dream_theme.ogg')
+	go='eb_nebo'
+	desc='Сон, небо'
+      </script>
+      <text>
+	<div class='block' id='1'>
+	  Небо, приближаясь, заполнило всё обозримое пространство. Вот оно зыбко ворочается, закручиваясь вовнутрь, прямо в меня. Почувствовав это, я закрыл глаза и медленными вдохами глотал небо, превращая его в туман. 
+	</div>
+	<div class='block' id='2'>
+	  Послышалось пение &#x2014; пели подземные звероподобные существа, которые то приседали, то раскачивались в темноте среди искрящих электродов &#x2014; далеко, там, где я не мог их увидеть.
+	</div>
+	<div class='block' id='3'>
+	  Туман заполнял мою душу, вытесняя всё прежнее, убивая старые радости и печали, меняя расположение звёзд во всём человеческом мире.
+	</div>
+      </text>
+    </scene>
+
+    <scene id='eb_nebo'>
+      <script>
+	ulx_set_background(0,0,0,'ulita_in_the_sky.png')
+	ulx_text_area_set_cursor('dream')
+	ulx_text_area_set_font_color(234,233,207, 200,0,0)
+	ulx_text_area_set_valign(0.5)
+	ulx_text_area_set_geometry(65,517,865,149)
+	ulx_set_bgm('dream_theme.ogg')
+	go='end'
+	desc='Конец: пленник сна'
+      </script>
+      <text>
+	<div class='block' id='1'>
+	  <p align='center'>
+	  	КОНЕЦ &#8470;6<br />
+		(Пленник сна)
+	  </p>
+	</div>
+      </text>
+    </scene>
+
+    <scene id='son_meet_zaika'>
+      <script>
+      	ulx_set_background(0,0,0,'dream_block_zai.png')
+	ulx_text_area_set_cursor('dream')
+	ulx_text_area_set_font_color(234,233,207, 200,0,0)
+	ulx_text_area_set_valign(0.5)
+	ulx_text_area_set_geometry(124,505,734,157)
+	ulx_set_bgm('dream_theme.ogg')
+	go='zaika_interm_intro'
+	desc='Утро, во дворе'
+      </script>
+      <text>
+	<div class='block' id='1'>
+	  Отрицать безумие происходящего было странно и бесполезно &#x2014; равно как и отрицать его реальность. Вечный спор бытия и небытия оставил мою душу и больше никогда её не посещал.
+	</div>
+	<div class='block' id='2'>
+	  Дождь тем временем закончился, начало светать. Я поднялся с земли и, оглядевшись, заметил сидевшего рядом в траве плюшевого зайчика Диму.  
+	</div>
+	<div class='block' id='3'>
+	  Я подошёл ближе и взял Диму на руки.
+	</div>
+      </text>
+    </scene>
+
+    <scene id='zaika_interm_intro'>
+      <script>
+	ulx_stop_bgm()
+	ulx_set_background(210,207,198, nil)
+	ulx_text_area_set_cursor('day')
+	ulx_text_area_set_font_color(41,29,25, 100,0,0)
+	ulx_text_area_set_geometry(75,325,850,130)
+	go='zaika_intermedia'
+	desc='Утро, во дворе'
+      </script>
+      <text>
+	<div class='block' id='1'>
+	  <p align='center'>
+	    Передо мной будто вдруг вспыхнула молния! Я зажмурился, а когда открыл глаза, обнаружил себя в совершенно ином месте.
+	  </p>
+	</div>
+      </text>
+    </scene>
+
+    <scene id='zaika_intermedia'>
+      <script>
+	ulx_set_background(0,0,0,'obryad_you_are_seing_us.png')
+	ulx_text_area_set_cursor('night')
+	ulx_text_area_set_font_color(234,233,207, 200,0,0)
+	ulx_text_area_set_geometry(564,53,379,579)
+	ulx_set_bgm('night_theme.ogg')
+	go='zaika_intermedia_cont'
+	desc='Утро, подземелье'
+      </script>
+      <text>
+	<div class='block' id='1'>
+	  Это было подземелье, тёмный зал с куполообразным потолком. В зале собрались странные, зловещие существа.
+	</div>
+	<div class='block' id='2'>
+	  Многие из них напоминали рептилий или моллюсков, иные же были людьми, но исполненными столь неистового бесчинства, что лица их походили на звериные рыла.
+	</div>
+	<div class='block' id='3'>
+	  Все эти создания сгрудились вокруг увитого искрящими проводами алтаря. Они раскачивались и извивались, повторяя слова заклинаний.
+	</div>
+	<div class='block' id='4'>
+	  Меня чудовища не замечали &#x2014; я был словно бестелесный дух, невидимый и не способный повлиять на ход событий.
+	</div>
+	<div class='block' id='5'>
+	  Тем временем на пороге зала возникла человеческая фигура.<br />
+	  Она выступила из тени, и когда всполохи озарили лицо с безмятежно сомкнутыми веками, я с ужасом узнал в нём свои черты!
+	</div>
+	<div class='block' id='6'>
+	  Фигура медленно направилась к алтарю.
+	</div>
+      </text>
+    </scene>
+
+    <scene id='zaika_intermedia_cont'>
+      <script>
+	ulx_set_background(0,0,0,'obryad_we_see_you.png')
+	ulx_text_area_set_cursor('night')
+	ulx_text_area_set_font_color(234,233,207, 200,0,0)
+	ulx_text_area_set_geometry(54,79,381,506)
+	ulx_set_bgm('night_theme.ogg')
+	go='zaika_intermedia_cont1'
+	desc='Утро, подземелье'
+      </script>
+      <text>
+	<div class='block' id='1'>
+	  Я зашёлся беззвучным криком, пытаясь разбудить своего двойника, не допустить верной его гибели, но попытки эти были тщетны.
+	</div>
+	<div class='block' id='3'>
+	  Перед алтарём фигура остановилась и покачнулась, запнувшись.<br />
+	  Два чудовища шагнули вперёд, будто собираясь взять моего двойника под руки, как вдруг у него из кармана что-то выкатилось.
+	</div>
+	<div class='block' id='5'>
+	  Это был зайчик Дима: игрушка упала прямо на каменную поверхность алтаря.<br />
+И тогда мой двойник вздрогнул и, словно нехотя, открыл глаза.
+	</div>
+	<div class='block' id='6'>
+	  Чудовища, похоже, не ожидали этого &#x2014; они заверещали, захрюкали, и сразу несколько щупалец и когтистых лап ухватили моего двойника за пиджак.
+	</div>
+	<div class='block' id='7'>
+	  Но тот не обратил на это внимания. Он лишь протянул руку, поднял зайчика и крепко прижал его к животу.<br />А затем необъяснимым образом исчез, будто его и не было.
+	</div>
+	<div class='block' id='8'>
+	  В зале повисла тишина. Чудовища замерли, словно окаменев, а потом завыли и затопотали в неистовой, горестной злобе.
+	</div>
+      </text>
+    </scene>
+
+    <scene id='zaika_intermedia_cont1'>
+      <script>
+	ulx_set_background(0,0,0,'obryad_we_see_you_c1.png',false)
+	ulx_text_area_set_cursor('night')
+	ulx_text_area_set_font_color(234,233,207, 200,0,0)
+	ulx_text_area_set_geometry(54,79,381,506)
+	ulx_set_bgm('night_theme.ogg')
+	go='zaika_intermedia_cont2'
+	ulx_pause(500);
+	desc='Утро, подземелье'
+      </script>
+      <text>
+	<div class='block' id='9'>
+	  Как безумные, собравшиеся в зале принялись крушить всё вокруг и кидаться друг на друга. Малочисленные люди быстро погибали в этой бессмысленной схватке.
+	</div>
+      </text>
+    </scene>
+
+    <scene id='zaika_intermedia_cont2'>
+      <script>
+	ulx_set_background(0,0,0,'obryad_we_see_you_c2.png',false)
+	ulx_text_area_set_cursor('night')
+	ulx_text_area_set_font_color(234,233,207, 200,0,0)
+	ulx_text_area_set_geometry(54,79,381,506)
+	ulx_set_bgm('night_theme.ogg')
+	go='zaika_intermedia_cont3'
+	desc='Утро, подземелье'
+      </script>
+      <text>
+	<div class='block' id='10'>
+	  Я заметил Андрея, бухгалтерского сына. Он пятился от алтаря, беспомощно размахивая руками.
+	</div>
+      </text>
+    </scene>
+
+    <scene id='zaika_intermedia_cont3'>
+      <script>
+	ulx_set_background(0,0,0,'obryad_we_see_you_c3.png',false)
+	ulx_text_area_set_cursor('night')
+	ulx_text_area_set_font_color(234,233,207, 200,0,0)
+	ulx_text_area_set_geometry(54,79,381,506)
+	ulx_set_bgm('night_theme.ogg')
+	go='zaika_interm_exit'
+	desc='Утро, подземелье'
+      </script>
+      <text>
+	<div class='block' id='11'>
+	  Секунду спустя Андрей уже лежал на полу, истерзанный клешнями чудовища. Кровь толчками выплескивалась из его развороченной шеи..
+	</div>
+      </text>
+    </scene>
+        
+    <scene id='zaika_interm_exit'>
+      <script>
+	ulx_stop_bgm()
+	ulx_set_background(0,0,0, nil)
+	ulx_text_area_set_cursor('night')
+	ulx_text_area_set_font_color(234,233,207, 200,0,0)
+	ulx_text_area_set_geometry(75,325,850,130)
+	go='zaika_to_elektrichka'
+	desc='Утро, подземелье'
+      </script>
+      <text>
+	<div class='block' id='1'>
+	  <p align='center'>
+	    В глазах у меня потемнело. Я понял, что возвращаюсь обратно.
+	  </p>
+	</div>
+      </text>
+    </scene>
+    
+    <scene id='zaika_to_elektrichka'>
+      <script>
+	ulx_stop_bgm()
+	ulx_set_background(210,207,198,'to_elektrichka.png')
+	ulx_text_area_set_cursor('day')
+	ulx_text_area_set_font_color(41,29,25, 100,0,0)
+	ulx_text_area_set_geometry(74,443,856,181)
+	ulx_set_bgm('zay_intro.ogg')
+	go='zaika_elektrichka'
+	desc='Утро, поле'
+      </script>
+      <text>
+	<div class='block' id='1'>
+	  Я снова стоял на открытом воздухе. Небо прояснилось, редкие клочья облаков сияли розово-жёлтым в лучах восходящего солнца.
+	</div>
+	<div class='block' id='2'>
+	  Поле, посреди которого я находился, просыпалось. Мириады травинок извивались на ветру, подрагивая, будто усики насекомых, и от этого приятно рябило в глазах.  
+	</div>
+	<div class='block' id='3'>
+	   Я постоял несколько минут, оглядываясь, а затем двинулся к череде тополей, за которыми виднелась железнодорожная станция. Там я купил билет до города и сел на подошедший вскоре поезд.
+	</div>
+      </text>
+    </scene>
+    
+    <scene id='zaika_elektrichka'>
+      <script>
+	ulx_set_background(210,207,198,'elektrichka_winrar.png')
+	ulx_text_area_set_cursor('day')
+	ulx_text_area_set_geometry(74,23,856,123)
+	ulx_text_area_set_font_color(41,29,25, 100,0,0)
+	ulx_set_bgm('zay_electr.ogg')
+	go='eb_zyaka'
+	desc='Утро, электричка'
+      </script>
+      <text>
+	<div class='block' id='1'>
+	  Электричка дребезжала тысячами разболтанных частей. Слепленные из потного воска торговцы мелочёвкой двигались по проходу, словно мягкие рыбы.
+	</div>
+	<div class='block' id='2'>
+	  Дядин дом и участок, сны и воспоминания детства не имели уже значения. Я смотрел в пуговичные глаза сидевшего напротив зайчика и думал, о сколь многом мы должны друг другу рассказать.
+	</div>
+      </text>
+    </scene>
+
+    <scene id='eb_zyaka'>
+      <script>
+	ulx_set_background(210,207,198,'elektrichka_winrar.png')
+	ulx_text_area_set_cursor('day')
+	ulx_text_area_set_geometry(74,23,856,123)
+	ulx_text_area_set_font_color(41,29,25, 100,0,0)
+	ulx_text_area_set_valign(0.5)
+	go='end'
+	desc='Конец: чудесное возвращение'
+	ulx_set_bgm('zay_electr.ogg')
+      </script>
+      <text>
+	<div class='block' id='1'>
+	  <p align='center'>
+	  	КОНЕЦ &#8470;7<br />
+		(Чудесное возвращение)
+	  </p>
+	</div>
+      </text>
+    </scene>
+    
+  </scenes>
+</ulita>
