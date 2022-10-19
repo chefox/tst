@@ -2,56 +2,6 @@
 <ulita>
   <scenes>
 
-    <scene id='dom_borsh_son_resume'>
-      <script>
-	ulx_stop_bgm()
-	ulx_set_background(0,0,0,nil)
-	ulx_set_background(0,0,0,'dream.png')
-	ulx_text_area_set_cursor('dream')
-	ulx_text_area_set_font_color(234,233,207, 200,0,0)
-	ulx_text_area_set_valign(0.5)
-	ulx_text_area_set_geometry(124,505,734,157)
-	ulx_set_bgm('dream_theme.ogg')
-	go='dom_spalna_noch'
-	desc='Сон, кастрюля борща'
-      </script>
-      <text>
-	<div class='block' id='4'>
-	  Вернувшись в дом и обтерев дождевую воду с усов, я поставил кастрюлю возле крышки погреба, решив сперва проверить, не испортился ли борщ.
-	</div>
-	<div class='block' id='5'>
-	  Когда я открыл кастрюлю, там была какая-то бугристая дурно пахнущая масса. Но едва я решил сообщить жене, что борщ испортился, в зловонной гуще открылась вмятина, похожая на человеческий рот, который, подёргиваясь, произнёс:<br />
-	  &#x2014; Я жду тебя, спускайся в погреб.
-	</div>
-      </text>
-    </scene>
-
-    <scene id='dom_borsh_son_podval'>
-      <script>
-	ulx_stop_bgm()
-	ulx_set_background(0,0,0,nil)
-	ulx_set_background(0,0,0,'dream.png')
-	ulx_text_area_set_cursor('dream')
-	ulx_text_area_set_font_color(234,233,207, 200,0,0)
-	ulx_text_area_set_valign(0.5)
-	ulx_text_area_set_geometry(124,505,734,157)
-	ulx_set_bgm('dream_theme.ogg')
-	go='dom_spalna_noch'
-	desc='Сон, прыжок в подвал'
-      </script>
-      <text>
-	<div class='block' id='6'>
-	  Вернувшись в дом и обтерев дождевую воду с усов, я направился к подвальному люку, открыл его и, покрепче обняв кастрюлю, спрыгнул вниз.
-	</div>
-	<div class='block' id='7'>
-	  Я летел, а дна всё не было... Пустота вокруг становилась гуще, сдавливала меня со всех сторон, а став совсем твёрдой, единой волной проникла внутрь моего тела.
-	</div>
-	<div class='block' id='8'>
-	  И я кричал пустотой &#x2014; беззвучно, так как не мог ни вдохнуть, ни выдохнуть, ни остановиться...
-	</div>
-      </text>
-    </scene>
-
     <scene id='dom_borsh_son_zai2'>
       <script>
 	ulx_set_background(0,0,0,'dream_with_zai.png')
