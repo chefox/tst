@@ -1,6 +1,8 @@
 let currentLocation = "start";
 let music;
 let audio;
+let effectsLevel = 1;
+let spotlightOn = 1;
 let linkSound = new Audio("sound/click.mp3");
 let blockSound = new Audio("sound/page.mp3");
 let need_quit = false;
@@ -13,10 +15,6 @@ let spotlight;
 window.addEventListener("load", () => {
     spotlight = document.querySelector('.spotlight');
     window.addEventListener('mousemove', e => updateSpotlight(e));
-
-    function updateSpotlight(e) {
-        spotlight.style.backgroundImage = `radial-gradient(circle at ${e.pageX / window.innerWidth * 100}% ${e.pageY / window.innerHeight * 100}%, ${spotlightSize}`;
-    }
 });
 
 
@@ -24,7 +22,48 @@ window.onload = function () {
     document.documentElement.style.setProperty('--cursor', 'url(img/cursor_day.png)')
     window.scrollTo(0, 0);
     if (detectMob()) spotlight.style.display = "none";
+
+
+    document.querySelector('#sound').addEventListener("click", function(e){
+        if(effectsLevel!=0){
+            effectsLevel=0;
+            if(audio!==undefined){
+                audio.volume=effectsLevel
+            }
+            e.target.style.textDecoration="line-through"
+        }
+        else{
+            effectsLevel=1;
+            if(audio!==undefined){
+                audio.volume=effectsLevel
+            }
+            e.target.style.textDecoration="none"
+        }
+    }
+    )
+    
+    document.querySelector('#spotlight').addEventListener("click", function(e){
+        if(spotlightOn!=0){
+            spotlightOn=0;
+            spotlight.style.display = "none"
+            e.target.style.textDecoration="line-through"
+            document.querySelector('.background').style.setProperty('cursor', 'default')
+        }
+        else{
+            spotlightOn=1;
+            spotlight.style.display = "inherit"
+            e.target.style.textDecoration="none"
+            document.querySelector('.background').style.setProperty('cursor', 'none')
+        }
+    }
+    )
+
     loadLinks();
+}
+
+function updateSpotlight(e) {
+    let bgImage = `radial-gradient(circle at ${e.pageX / window.innerWidth * 100}% ${e.pageY / window.innerHeight * 100}%, ${spotlightSize})`;
+    spotlight.style.backgroundImage = bgImage;
 }
 
 function loadLinks() {
@@ -33,6 +72,8 @@ function loadLinks() {
 
         el.addEventListener("click", function (e) {
             e.preventDefault();
+
+            if(e.target.id!="sound" && e.target.id!="spotlight"){
             let reqest = JSON.stringify(
                 {
                     have_ulita_key: have_ulita_key,
@@ -42,10 +83,18 @@ function loadLinks() {
                 }
             );
             sendRequest(reqest);
+            linkSound.volume=effectsLevel;
             linkSound.play()
-        });
+
+            }
+        }
+        );
     })
 }
+
+
+
+
 
 function loadBlocks() {
     var listOfBlocks = document.getElementsByClassName("block");
@@ -58,6 +107,7 @@ function loadBlocks() {
                 if (nextBlock) {
                     e.target.style.display = "none";
                     nextBlock.style.display = "block";
+                    blockSound.volume=effectsLevel;
                     blockSound.play();
                     if (nextBlock.contains(nextBlock.getElementsByClassName("dialog")[0])) {
                         document.getElementById("content").style.backgroundImage = "url(img/" + nextBlock.getElementsByClassName("dialog")[0].id + ".jpg)";
@@ -81,11 +131,14 @@ function sendRequest(requestBody) {
             if (audio) audio.pause();
             if (music != "nomusic") {
                 audio = new Audio(music);
+                audio.volume=effectsLevel;
                 audio.play();
             }
         }
         if (resp.cursor) document.documentElement.style.setProperty('--cursor', resp.cursor)
+        console.log(resp.spotlight != spotlightSize);
         if (resp.spotlight != spotlightSize) spotlightSize = resp.spotlight;
+        console.log(spotlightSize);
         if (resp.bgcolor != document.body.style.background) document.body.style.background = resp.bgcolor;
         if (resp.have_ulita_key) have_ulita_key = resp.have_ulita_key;
         if (resp.son_have_kastrula) son_have_kastrula = resp.son_have_kastrula;
@@ -111,7 +164,7 @@ function detectMob() {
         /iPad/i,
         /iPod/i,
         /BlackBerry/i,
-        /Windows Phone/i
+        /Windows Phone/i,
     ];
 
     return toMatch.some((toMatchItem) => {
