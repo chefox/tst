@@ -55,7 +55,11 @@ locations["son_ab8"] = require("./locations/son_ab8.json");
 locations["dom_borsh_son_return1"] = require("./locations/dom_borsh_son_return1.json");
 locations["dom_borsh_son_return2"] = require("./locations/dom_borsh_son_return2.json");
 locations["dom_borsh_son_return3"] = require("./locations/dom_borsh_son_return3.json");
+locations["dom_borsh_son_return4"] = require("./locations/dom_borsh_son_return4.json");
 locations["son_back_to_house"] = require("./locations/son_back_to_house.json");
+locations["dom_borsh_son_resume"] = require("./locations/dom_borsh_son_resume.json");
+locations["son_son_k_ulite"] = require("./locations/son_son_k_ulite.json");
+locations["son_s_borshom_k_ulite"] = require("./locations/son_s_borshom_k_ulite.json");
 
 
 const app = express();
