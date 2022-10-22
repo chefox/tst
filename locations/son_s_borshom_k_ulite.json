@@ -1,0 +1,9 @@
+{
+  "background": "img/dream_ab_near.jpg",
+  "music": "sound/dream_theme.ogg",
+  "bgcolor": "rgb(0, 0, 0)",
+  "cursor": "url(img/cursor_dream.png)",
+  "invertText": true,
+  "spotlight": "transparent 0%, rgba(220, 195, 100, 0.7) 1%, rgba(220, 185, 70, 0.4) 1.2%, rgba(225, 220, 95, 0.2) 1.4%, transparent 8%, rgba(0, 0, 0, 0.6) 35%",
+  "text": "<div class='textblock' style='text-align: center; width: 417px; height: 215px; margin-left: 526px; margin-top: 244px;'><div class='block' id='1'>Тут я понял, что борщ и впрямь выглядел аппетитно &#x2014; наваристый, маслянисто-лиловый. Опустившись перед кастрюлей на колени, я достал ложку и ломоть серого хлеба и начал есть.</div><div class='block' id='2'>В упоении глотал я ложку за ложкой. Артур Борисович, скрючившись, тоже обедал, зачёрпывая жижу пальцами.</div><div class='block' id='3'>Краем глаза я видел, как земля уходит у меня из-под ног &#x2014; вместе с борщом и моим дядей мы поднимались прямо в текучее, вспухающее и опадающее небо. <br /><a href=# class='link' id='son_nebo_ulita'>Лететь</a></div></div>"
+}

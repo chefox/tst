@@ -1,44 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ulita>
   <scenes>
-
-    <scene id='dom_borsh_son_zai2'>
-      <script>
-	ulx_set_background(0,0,0,'dream_with_zai.png')
-	ulx_text_area_set_cursor('dream')
-	ulx_text_area_set_font_color(234,233,207, 200,0,0)
-	ulx_text_area_set_valign(0.5)
-	ulx_text_area_set_geometry(124,505,734,157)
-	ulx_set_bgm('dream_theme.ogg')
-
-	go='borsh_son_outside'
-	desc='Сон, кастрюля борща'
-      </script>
-      <text>
-
-      </text>
-    </scene>
-
-    <scene id='son_son_k_ulite'>
-      <script>
-      	ulx_set_background(0,0,0,'dream_block_zai.png')
-	ulx_text_area_set_cursor('dream')
-	ulx_text_area_set_font_color(234,233,207, 200,0,0)
-	ulx_text_area_set_valign(0.5)
-	ulx_text_area_set_geometry(124,505,734,157)
-	ulx_set_bgm('dream_theme.ogg')
-	go='son_nebo_ulita'
-	desc='Сон, во дворе'
-      </script>
-      <text>
-	<div class='block' id='1'>
-	  По существу, происходившее вокруг безумие действительно было сном, в некий момент я это понял. А раз так, сопротивляться или принимать решения было уже бессмысленно.
-	</div>
-	<div class='block' id='2'>
-	  Я сосредоточил все умственные усилия на том, чтобы проснуться. Мир вокруг поблек, картина стала меняться, уходить вниз, прочь. Я будто плыл в серебристой пустоте, которой противостояло лишь необъятное морщинистое небо.
-	</div>
-      </text>
-    </scene>
     
     <scene id='son_ab9'>
       <script>
@@ -85,51 +47,9 @@
 	</div>
       </text>
     </scene>
-    
-    <scene id='dom_borsh_son_return4'>
-      <script>
-      	ulx_set_background(0,0,0,'dream_block.png')
-	ulx_text_area_set_cursor('dream')
-	ulx_text_area_set_font_color(234,233,207, 200,0,0)
-	ulx_text_area_set_valign(0.5)
-	ulx_text_area_set_geometry(124,505,734,157)
-	ulx_set_bgm('dream_theme.ogg')
-	go='son_back_to_house'
-	desc='Сон, возвращение в дом'
-      </script>
-      <text>
-	<div class='block' id='1'>
-	  Внезапно я понял, что нужно спасаться, бежать, пока не поздно &#x2014; и сломя голову кинулся к дому...
-	</div>
-      </text>
-    </scene>
 
     <!-- -->
     
-    <scene id='son_s_borshom_k_ulite'>
-      <script>
-      	ulx_set_background(0,0,0,'dream_ab_near.png')
-	ulx_text_area_set_cursor('dream')
-	ulx_text_area_set_font_color(234,233,207, 200,0,0)
-	ulx_text_area_set_valign(0.5)
-	ulx_text_area_set_halign(0.5)	
-	ulx_text_area_set_geometry(526,244,417,215)
-	ulx_set_bgm('dream_theme.ogg')
-	go='son_nebo_ulita'
-	desc='Сон, обед'
-      </script>
-      <text>
-	<div class='block' id='1'>
-	  Тут я понял, что борщ и впрямь выглядел аппетитно &#x2014; наваристый, маслянисто-лиловый. Опустившись перед кастрюлей на колени, я достал ложку и ломоть серого хлеба и начал есть.
-	</div>
-	<div class='block' id='2'>
-	  В упоении глотал я ложку за ложкой. Артур Борисович, скрючившись, тоже обедал, зачёрпывая жижу пальцами.
-	</div>
-	<div class='block' id='3'>
-	  Краем глаза я видел, как земля уходит у меня из-под ног &#x2014; вместе с борщом и моим дядей мы поднимались прямо в текучее, вспухающее и опадающее небо. 
-	</div>
-      </text>
-    </scene>
     
     <scene id='son_nebo_ulita'>
       <script>
