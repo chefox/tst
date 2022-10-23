@@ -1,0 +1,10 @@
+{
+  "background": "img/ulita_in_the_sky.jpg",
+  "music": "sound/dream_theme.ogg",
+  "bgcolor": "rgb(0, 0, 0)",
+  "cursor": "url(img/cursor_dream.png)",
+  "invertText": true,
+  "son_have_kastrula": false,
+  "spotlight": "transparent 0%, rgba(220, 195, 100, 0.7) 1%, rgba(220, 185, 70, 0.4) 1.2%, rgba(225, 220, 95, 0.2) 1.4%, transparent 8%, rgba(0, 0, 0, 0.6) 35%",
+  "text": "<div class='textblock' style='text-align: center; width: 865px; height: 149px; margin-left: 65px; margin-top: 517px;'>\t<div class='block' id='1'>Небо, приближаясь, заполнило всё обозримое пространство. Вот оно зыбко ворочается, закручиваясь вовнутрь, прямо в меня. Почувствовав это, я закрыл глаза и медленными вдохами глотал небо, превращая его в туман. </div><div class='block' id='2'>Послышалось пение &#x2014; пели подземные звероподобные существа, которые то приседали, то раскачивались в темноте среди искрящих электродов &#x2014; далеко, там, где я не мог их увидеть.</div><div class='block' id='3'>Туман заполнял мою душу, вытесняя всё прежнее, убивая старые радости и печали, меняя расположение звёзд во всём человеческом мире.</br><a href=# class='link' id='eb_nebo'> ... </a></div></div>"
+}
