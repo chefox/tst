@@ -60,6 +60,8 @@ locations["son_back_to_house"] = require("./locations/son_back_to_house.json");
 locations["dom_borsh_son_resume"] = require("./locations/dom_borsh_son_resume.json");
 locations["son_son_k_ulite"] = require("./locations/son_son_k_ulite.json");
 locations["son_s_borshom_k_ulite"] = require("./locations/son_s_borshom_k_ulite.json");
+locations["son_nebo_ulita"] = require("./locations/son_nebo_ulita.json");
+locations["eb_nebo"] = require("./locations/eb_nebo.json");
 
 
 const app = express();
