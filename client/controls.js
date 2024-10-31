@@ -217,6 +217,12 @@ function selectBlock() {
     }
 }
 
+
+//here is a brand-new code, not used in game yet:
+
+
+
+
 // Helper function to set a cookie
 function setCookie(name, value, days) {
     let expires = "";
@@ -305,4 +311,44 @@ function loadGame() {
 function clearGame() {
     eraseCookie("gameStatus");
     document.getElementById("gameStatus").innerText = "Game status cleared!";
+}
+
+
+let isMuted = false;
+let spotlightOn = false;
+
+// Initialize music (autoplay disabled by default in many browsers)
+music.loop = true;
+music.play().catch(() => {
+    console.log("Autoplay prevented. Click to play music.");
+});
+
+// Function to toggle sound
+function toggleSound() {
+    isMuted = !isMuted;
+    music.muted = isMuted;
+    linkSound.muted = isMuted;
+    blockSound.muted = isMuted;
+
+    const statusText = isMuted ? "Sound is muted" : "Sound is unmuted";
+    document.getElementById("gameStatus").innerText = statusText;
+}
+
+// Function to toggle spotlight
+function toggleSpotlight() {
+    spotlightOn = !spotlightOn;
+    spotlight.style.display = spotlightOn ? "block" : "none";
+
+    const statusText = spotlightOn ? "Spotlight is ON" : "Spotlight is OFF";
+    document.getElementById("gameStatus").innerText = statusText;
+}
+
+// Event listeners to play sounds
+document.addEventListener("click", () => {
+    if (!isMuted) linkSound.play();
+});
+
+// Example function to play block sound on a specific event
+function playBlockSound() {
+    if (!isMuted) blockSound.play();
 }
