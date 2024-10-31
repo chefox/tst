@@ -217,3 +217,92 @@ function selectBlock() {
     }
 }
 
+// Helper function to set a cookie
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// Helper function to get a cookie
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+// Helper function to delete a cookie
+function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-99999999; path=/';
+}
+
+// Function to save the game status in a cookie
+function saveGame() {
+    // Capture game status
+    const gameStatus = {
+        currentLocation,
+        effectsLevel,
+        spotlightOn,
+        need_quit,
+        have_ulita_key,
+        son_have_kastrula,
+        kastrula_had_spoken,
+        spotlightSize,
+        have_ulita_keyFound: have_ulita_keyFound.checked,
+        son_have_kastrulaFound: son_have_kastrulaFound.checked,
+        kastrula_had_spokenFound: kastrula_had_spokenFound.checked,
+        dom_son_resumeFound: dom_son_resumeFound.checked,
+        dom_son_smertFound: dom_son_smertFound.checked,
+        dom_borsh_son_podvalFound: dom_borsh_son_podvalFound.checked
+    };
+
+    // Save as JSON string in a cookie
+    setCookie("gameStatus", JSON.stringify(gameStatus), 7); // Save for 7 days
+    document.getElementById("gameStatus").innerText = "Game status saved!";
+}
+
+// Function to load the game status from a cookie
+function loadGame() {
+    const savedGameStatus = getCookie("gameStatus");
+    if (savedGameStatus) {
+        const gameStatus = JSON.parse(savedGameStatus);
+
+        // Restore game status variables
+        currentLocation = gameStatus.currentLocation;
+        effectsLevel = gameStatus.effectsLevel;
+        spotlightOn = gameStatus.spotlightOn;
+        need_quit = gameStatus.need_quit;
+        have_ulita_key = gameStatus.have_ulita_key;
+        son_have_kastrula = gameStatus.son_have_kastrula;
+        kastrula_had_spoken = gameStatus.kastrula_had_spoken;
+        spotlightSize = gameStatus.spotlightSize;
+
+        // Restore DOM element values
+        have_ulita_keyFound.checked = gameStatus.have_ulita_keyFound;
+        son_have_kastrulaFound.checked = gameStatus.son_have_kastrulaFound;
+        kastrula_had_spokenFound.checked = gameStatus.kastrula_had_spokenFound;
+        dom_son_resumeFound.checked = gameStatus.dom_son_resumeFound;
+        dom_son_smertFound.checked = gameStatus.dom_son_smertFound;
+        dom_borsh_son_podvalFound.checked = gameStatus.dom_borsh_son_podvalFound;
+
+        document.getElementById("gameStatus").innerText = 
+            `Game loaded! Location: ${currentLocation}, Effects Level: ${effectsLevel}, Spotlight On: ${spotlightOn}`;
+    } else {
+        document.getElementById("gameStatus").innerText = "No saved game status found!";
+    }
+}
+
+// Function to clear the game status cookie
+function clearGame() {
+    eraseCookie("gameStatus");
+    document.getElementById("gameStatus").innerText = "Game status cleared!";
+}
